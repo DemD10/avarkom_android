@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:animateLayoutChanges="true"
+    android:background="@color/backgroundColor"
+    >
+
+  <android.support.design.widget.AppBarLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:background="@color/colorPrimary"
+      >
+
+    <android.support.design.widget.TabLayout
+        android:id="@+id/accidentTabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/whiteColor"
+        app:tabGravity="fill"
+        app:tabMode="fixed"
+        >
+
+    </android.support.design.widget.TabLayout>
+
+
+  </android.support.design.widget.AppBarLayout>
+
+
+
+  <FrameLayout
+      android:id="@+id/mapAccidentContainer"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      app:layout_behavior="@string/appbar_scrolling_view_behavior"
+      >
+
+    <android.support.v7.widget.CardView
+        android:clickable="true"
+        android:foreground="?selectableItemBackground"
+        android:id="@+id/accidentAddressContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        app:cardBackgroundColor="@color/whiteColor"
+        app:cardCornerRadius="24dp"
+        app:cardElevation="4dp"
+        >
+
+      <ProgressBar
+          android:indeterminate="true"
+          android:visibility="invisible"
+          android:id="@+id/addressProgress"
+          android:layout_gravity="bottom|center_horizontal"
+          android:layout_marginStart="42dp"
+          android:layout_marginEnd="42dp"
+          style="@style/Base.Widget.AppCompat.ProgressBar.Horizontal"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          />
+
+      <RelativeLayout
+          android:clickable="true"
+          android:orientation="horizontal"
+          android:layout_margin="16dp"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          >
+
+        <ImageView
+            android:id="@+id/backButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_alignParentStart="true"
+            app:srcCompat="@drawable/ic_search_black_24dp"
+            android:textColor="@color/greyColor"
+            />
+
+        <TextView
+            tools:text="some place with long address"
+            android:singleLine="true"
+            android:id="@+id/placesText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center_horizontal"
+            android:layout_gravity="center_vertical"
+            android:layout_marginEnd="32dp"
+            android:layout_marginStart="32dp"
+            android:textAlignment="center"
+            android:textColor="@color/greyColor"
+            android:textSize="16sp"
+            />
+
+        <ImageView
+            android:clickable="true"
+            android:id="@+id/accidentVoiceSearch"
+            android:background="?selectableItemBackgroundBorderless"
+            android:layout_alignParentEnd="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|end"
+            app:srcCompat="@drawable/ic_keyboard_voice_black_24dp"
+            android:textColor="@color/greyColor"
+            />
+
+      </RelativeLayout>
+
+
+    </android.support.v7.widget.CardView>
+
+    <Button
+        android:textAlignment="center"
+        android:id="@+id/carAccidentActionButton"
+        android:text="Вызвать"
+        android:layout_marginBottom="56dp"
+        android:layout_gravity="bottom|center_horizontal"
+        android:paddingStart="32dp"
+        android:paddingEnd="32dp"
+        android:drawableStart="@drawable/ic_car_call"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
+
+    <fragment
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/mapAccidentView"
+        android:name="com.google.android.gms.maps.MapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical|center_horizontal"
+        android:paddingBottom="15dp"
+        app:srcCompat="@drawable/ic_location_marker_pin" />¬
+
+  </FrameLayout>
+
+
+</android.support.design.widget.CoordinatorLayout>

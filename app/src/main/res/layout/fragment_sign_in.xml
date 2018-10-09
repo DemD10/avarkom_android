@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:id="@+id/signInCoordinatorContainer"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundColor"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:animateLayoutChanges="true"
+    >
+
+  <android.support.design.widget.AppBarLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:background="@color/colorPrimary"
+      >
+
+    <android.support.v7.widget.Toolbar
+        android:background="@color/whiteColor"
+        app:titleTextColor="@color/blackColor"
+        app:title="@string/sign_in"
+        app:navigationIcon="@drawable/ic_arrow_back_black_24dp"
+        android:id="@+id/signInToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        />
+
+  </android.support.design.widget.AppBarLayout>
+
+
+  <LinearLayout
+      android:background="@color/whiteColor"
+      android:id="@+id/signUpContainer"
+      android:layout_marginTop="4dp"
+      android:orientation="vertical"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      app:layout_behavior="@string/appbar_scrolling_view_behavior"
+      >
+
+  <android.support.design.widget.TextInputLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      >
+
+    <EditText
+        android:id="@+id/phoneNumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:hint="@string/text_phone_number"
+        android:inputType="phone"
+        />
+
+  </android.support.design.widget.TextInputLayout>
+
+  <android.support.design.widget.TextInputLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      >
+
+    <EditText
+        android:id="@+id/userPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:hint="@string/password"
+        android:inputType="textPassword"
+        />
+
+  </android.support.design.widget.TextInputLayout>
+  </LinearLayout>
+
+  <Button
+      android:id="@+id/continueSignInButton"
+      android:text="@string/text_auth"
+      android:layout_gravity="bottom"
+      style="@style/Widget.AppCompat.Button.Colored"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      />
+
+  <ProgressBar
+      android:visibility="gone"
+      android:id="@+id/progressBar"
+      android:layout_gravity="center"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      />
+
+</android.support.design.widget.CoordinatorLayout>

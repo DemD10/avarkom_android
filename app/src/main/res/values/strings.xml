@@ -1,0 +1,37 @@
+<resources>
+  <string name="app_name">Avarkom</string>
+  <string name="text_licence_agreement">При входе или регистрации вы подтверждаете свое согласие на использование пользовательского соглашения</string>
+  <string name="text_sign_up">Зарегистрироваться</string>
+  <string name="text_sign_in_help">Войти по номеру телефона</string>
+  <string name="text_sign_in">Авторизуйтесь в приложении</string>
+  <string name="sign_in">Авторизация</string>
+  <string name="sign_up">Регистрация</string>
+  <string name="text_continue_sign_up">Продолжить</string>
+  <string name="name">Имя</string>
+  <string name="email">Электронная почта</string>
+  <string name="phone_number">Сотовый номер</string>
+  <string name="password">Пароль</string>
+  <string name="sign_up_error">Ошибка регистрации!</string>
+  <string name="sign_in_error">Ошибка входа!</string>
+  <string name="text_auth">Войти</string>
+  <string name="text_phone_number">Номер телефона</string>
+  <string name="text_sms_code">Код из СМС</string>
+  <string name="text_confirmation">Подтверждение</string>
+  <string name="menu_news_text">Новости</string>
+  <string name="map_menu_text">Карта</string>
+  <string name="chat_menu_text">Чат</string>
+  <string name="search_menu_tet">Поиск</string>
+  <string name="more_menu_text">Еще</string>
+  <string name="allow">Allow</string>
+  <string name="snackbar_location_info">We can\'t find you. Please allow a location permission</string>
+  <string name="location_permission_info">We want to discover your current address. Please allow a location permission request</string>
+  <string name="notify_accident">Сообщить о ДТП</string>
+  <string name="call_commissioner">Вызвать АК</string>
+  <string name="profit">Profit</string>
+  <string name="feedback">Feedback</string>
+  <string name="successful">Successful</string>
+  <string name="bottom_sheet_profile">Мой профиль</string>
+  <string name="bottom_sheet_call_help">Позвать на помощь</string>
+  <string name="bottom_sheet_check_fines">Проверка штрафов</string>
+  <string name="bottom_sheet_settings">Настройки</string>
+</resources>

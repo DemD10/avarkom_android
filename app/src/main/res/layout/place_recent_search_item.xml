@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/recentSearchContainer"
+    android:background="?selectableItemBackground"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+
+  <TextView
+      android:id="@+id/placesAddress"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="48dp"
+      android:layout_marginTop="8dp"
+      android:alpha="0.8"
+      android:text="Place"
+      android:textColor="@color/greyColor"
+      android:textSize="14sp"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      />
+
+  <View
+      android:id="@+id/view"
+      android:layout_width="0dp"
+      android:layout_height="1dp"
+      android:layout_marginEnd="16dp"
+      android:layout_marginStart="48dp"
+      android:layout_marginTop="8dp"
+      android:alpha="0.1"
+      android:background="@color/blackColor"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/countryText"
+      />
+
+  <ImageView
+      android:id="@+id/imageView"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="16dp"
+      android:layout_marginTop="16dp"
+      android:alpha="0.5"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      app:srcCompat="@drawable/ic_history"
+      />
+  <TextView
+      android:id="@+id/countryText"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="48dp"
+      android:layout_marginTop="8dp"
+      android:alpha="0.4"
+      android:text="Country"
+      android:textSize="12sp"
+      app:layout_constraintEnd_toEndOf="@+id/placesAddress"
+      app:layout_constraintHorizontal_bias="0.0"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/placesAddress"
+      />
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,32 @@
+<tabs>
+  <tab
+      icon="@drawable/ic_map"
+      id="@+id/action_map"
+      >
+  </tab>
+
+  <tab
+      icon="@drawable/ic_chat"
+      id="@+id/action_chat"
+      >
+  </tab>
+
+  <tab
+      icon="@drawable/ic_seach_oval"
+      id="@+id/action_search"
+      >
+  </tab>
+
+  <tab
+      icon="@drawable/ic_news"
+      id="@+id/action_news"
+      >
+  </tab>
+
+  <tab
+      icon="@drawable/ic_menu"
+      id="@+id/action_menu"
+      >
+  </tab>
+
+</tabs>

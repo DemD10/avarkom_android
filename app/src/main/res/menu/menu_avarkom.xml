@@ -1,0 +1,27 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+  <item
+      android:id="@+id/action_map"
+      android:icon="@drawable/ic_map"
+      android:title="@string/map_menu_text"/>
+  <item
+      android:id="@+id/action_chat"
+      android:icon="@drawable/ic_chat"
+      android:title="@string/chat_menu_text"/>
+
+  <item
+      android:id="@+id/action_search"
+      android:icon="@drawable/ic_human_handsup"
+      android:title="@string/search_menu_tet"/>
+
+  <item
+      android:id="@+id/action_news"
+      android:icon="@drawable/ic_news"
+      android:title="@string/menu_news_text"/>
+
+  <item
+      android:id="@+id/action_menu"
+      android:icon="@drawable/ic_menu"
+      android:title="@string/more_menu_text"/>
+
+
+</menu>

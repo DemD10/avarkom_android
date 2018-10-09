@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/addressSearchingCoordinator"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+    android:background="@color/backgroundColor"
+    >
+
+  <android.support.design.widget.AppBarLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:background="@color/colorPrimary"
+      >
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        app:cardBackgroundColor="@color/whiteColor"
+        app:cardCornerRadius="5dp"
+        >
+      <RelativeLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          >
+
+        <ImageView
+            android:background="?selectableItemBackground"
+            android:padding="16dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentStart="true"
+            android:id="@+id/backButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            app:srcCompat="@drawable/ic_arrow_back_black_24dp"
+            android:textColor="@color/greyColor"
+            />
+
+        <EditText
+            android:id="@+id/placesText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="48dp"
+            android:layout_marginEnd="48dp"
+            android:hint="Пункт назначения"
+            android:textColor="@color/greyColor"
+            />
+
+        <ImageView
+            android:id="@+id/voiceSearchButton"
+            android:clickable="true"
+            android:background="?selectableItemBackground"
+            android:padding="16dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"
+            app:srcCompat="@drawable/ic_keyboard_voice_black_24dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+
+      </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+  </android.support.design.widget.AppBarLayout>
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:orientation="vertical"
+      android:paddingTop="8dp"
+      app:layout_behavior="@string/appbar_scrolling_view_behavior"
+      >
+
+    <android.support.constraint.ConstraintLayout
+        android:clickable="true"
+        android:background="?android:attr/selectableItemBackground"
+        android:orientation="horizontal"
+        android:id="@+id/pickPlaceOnMapContainer"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        >
+      <ImageView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_gravity="center"
+          android:layout_marginEnd="8dp"
+          app:layout_constraintBottom_toBottomOf="parent"
+          app:layout_constraintEnd_toStartOf="@+id/textView"
+          app:layout_constraintTop_toTopOf="parent"
+          app:layout_constraintVertical_bias="0.333"
+          app:srcCompat="@drawable/ic_pin_drop_black_24dp"
+          />
+
+      <TextView
+          android:id="@+id/textView"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_gravity="center"
+          android:layout_marginBottom="8dp"
+          android:text="Показать на карте"
+          android:textAlignment="center"
+          app:layout_constraintBottom_toBottomOf="parent"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toTopOf="parent"
+          app:layout_constraintVertical_bias="0.517"
+          />
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/previousSearchesList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layoutManager="android.support.v7.widget.LinearLayoutManager"
+        ></android.support.v7.widget.RecyclerView>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/searchResultsList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layoutManager="android.support.v7.widget.LinearLayoutManager"
+        ></android.support.v7.widget.RecyclerView>
+  </LinearLayout>
+
+
+  <ProgressBar
+      android:id="@+id/addressSearchingProgressBar"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:indeterminate="true"
+      android:visibility="gone"
+      app:layout_behavior="@string/appbar_scrolling_view_behavior"
+      style="@style/Base.Widget.AppCompat.ProgressBar.Horizontal"
+      />
+
+</android.support.design.widget.CoordinatorLayout>

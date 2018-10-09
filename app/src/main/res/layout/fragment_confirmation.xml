@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:id="@+id/signInCoordinatorContainer"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundColor"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:animateLayoutChanges="true"
+    >
+
+  <android.support.design.widget.AppBarLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:background="@color/colorPrimary"
+      >
+
+    <android.support.v7.widget.Toolbar
+        android:background="@color/whiteColor"
+        app:titleTextColor="@color/blackColor"
+        app:title="@string/text_confirmation"
+        app:navigationIcon="@drawable/ic_arrow_back_black_24dp"
+        android:id="@+id/signInToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        />
+
+  </android.support.design.widget.AppBarLayout>
+
+
+  <LinearLayout
+      android:background="@color/whiteColor"
+      android:id="@+id/signUpContainer"
+      android:layout_marginTop="4dp"
+      android:orientation="vertical"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      app:layout_behavior="@string/appbar_scrolling_view_behavior"
+      >
+
+  <android.support.design.widget.TextInputLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      >
+
+    <EditText
+        android:id="@+id/phoneNumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:text="+79136053778"
+        android:enabled="false"
+        android:hint="@string/text_phone_number"
+        android:inputType="phone"
+        />
+
+  </android.support.design.widget.TextInputLayout>
+
+  <android.support.design.widget.TextInputLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      >
+
+    <EditText
+        android:id="@+id/activationCode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/text_sms_code"
+        android:inputType="number"
+        android:padding="16dp"
+        />
+
+  </android.support.design.widget.TextInputLayout>
+
+    <TextView
+        android:layout_marginStart="16dp"
+        android:textSize="14sp"
+        android:textColor="@color/greyColor"
+        android:text="Код действует в течение 10 минут"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
+
+    <TextView
+        android:id="@+id/sendCodeAgainButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?selectableItemBackground"
+        android:padding="16dp"
+        android:text="Отправить код повторно"
+        android:textColor="@color/colorPrimary"
+        android:textSize="14sp"
+        />
+
+  </LinearLayout>
+
+  <Button
+      android:id="@+id/continueConfirmationButton"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_gravity="bottom"
+      android:text="@string/text_sign_up"
+      style="@style/Widget.AppCompat.Button.Colored"
+      />
+
+  <ProgressBar
+      android:visibility="gone"
+      android:id="@+id/progressBar"
+      android:layout_gravity="center"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      />
+
+</android.support.design.widget.CoordinatorLayout>
